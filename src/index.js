@@ -3,6 +3,7 @@ const redirects = {
   '/ldct': 'https://github.com/ldct',
   '/swift': 'https://swift.exe.xyz:8000/',
   '/gap': 'https://gap-cas.exe.xyz:8000/',
+  '/lean-frontend-cf': 'https://lean-frontend-cf.exe.xyz:8000/',
 };
 
 export default {
