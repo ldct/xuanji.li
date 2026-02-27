@@ -1,6 +1,7 @@
 const redirects = {
   '/github': 'https://github.com/ldct',
   '/ldct': 'https://github.com/ldct',
+  '/swift': 'https://swift.exe.xyz:8000/',
 };
 
 export default {
@@ -38,8 +39,6 @@ export default {
 </head>
 <body>
 <pre>
-$ cat redirects.txt
-
 ${links}
 </pre>
 </body>
