@@ -3,7 +3,6 @@ const redirects = {
   '/ldct': 'https://github.com/ldct',
   '/swift': 'https://swift.exe.xyz:8000/',
   '/gap': 'https://gap-cas.exe.xyz:8000/',
-  '/view-source': 'https://github.com/ldct/xuanji.li',
 };
 
 export default {
@@ -13,6 +12,10 @@ export default {
 
     if (redirects[path]) {
       return Response.redirect(redirects[path], 302);
+    }
+
+    if (path === '/view-source') {
+      return Response.redirect('https://github.com/ldct/xuanji.li', 302);
     }
 
     if (path === '/redirects.json') {
@@ -32,6 +35,7 @@ export default {
 
     if (path === '/') {
       const pages = {
+        '/view-source': 'https://github.com/ldct/xuanji.li',
         '/redirects.json': 'redirects as JSON',
         '/redirects.txt': 'redirects as plain text',
       };
