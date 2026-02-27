@@ -31,8 +31,16 @@ export default {
     }
 
     if (path === '/') {
+      const pages = {
+        '/redirects.json': 'redirects as JSON',
+        '/redirects.txt': 'redirects as plain text',
+      };
+
       const links = Object.entries(redirects)
         .map(([p, target]) => `<a href="${p}">${p}</a> → ${target}`)
+        .join('\n');
+      const pageLinks = Object.entries(pages)
+        .map(([p, desc]) => `<a href="${p}">${p}</a> → ${desc}`)
         .join('\n');
 
       return new Response(
@@ -57,6 +65,8 @@ export default {
 <body>
 <pre>
 ${links}
+
+${pageLinks}
 </pre>
 </body>
 </html>`,
