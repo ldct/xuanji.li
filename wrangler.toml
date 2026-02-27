@@ -1,0 +1,9 @@
+name = "xuanji-li"
+main = "src/index.js"
+account_id = "d130938d761b67012e1f4df74bd23241"
+compatibility_date = "2024-01-01"
+
+routes = [
+  { pattern = "xuanji.li/*", zone_name = "xuanji.li" },
+  { pattern = "xuanji.li", zone_name = "xuanji.li" }
+]
