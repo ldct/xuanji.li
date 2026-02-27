@@ -15,6 +15,21 @@ export default {
       return Response.redirect(redirects[path], 302);
     }
 
+    if (path === '/redirects.json') {
+      return new Response(JSON.stringify(redirects, null, 2), {
+        headers: { 'Content-Type': 'application/json; charset=utf-8' },
+      });
+    }
+
+    if (path === '/redirects.txt') {
+      const text = Object.entries(redirects)
+        .map(([p, target]) => `${p} -> ${target}`)
+        .join('\n');
+      return new Response(text, {
+        headers: { 'Content-Type': 'text/plain; charset=utf-8' },
+      });
+    }
+
     if (path === '/') {
       const links = Object.entries(redirects)
         .map(([p, target]) => `<a href="${p}">${p}</a> → ${target}`)
