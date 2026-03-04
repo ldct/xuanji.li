@@ -11,6 +11,11 @@ export default {
     const url = new URL(request.url);
     const path = url.pathname.replace(/\/+$/, '') || '/';
 
+    if (url.hostname === 'www.xuanji.li') {
+      url.hostname = 'xuanji.li';
+      return Response.redirect(url.toString(), 301);
+    }
+
     if (redirects[path]) {
       return Response.redirect(redirects[path], 302);
     }
