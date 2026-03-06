@@ -4,6 +4,7 @@ const redirects = {
   '/swift': 'https://swift.exe.xyz:8000/',
   '/gap': 'https://gap-cas.exe.xyz:8000/',
   '/lean-frontend-cf': 'https://lean-frontend-cf.exe.xyz:8000/',
+  '/textbooks': 'https://mobile-textbook-reader.exe.xyz:8000/?book=dummit-foote',
 };
 
 export default {
