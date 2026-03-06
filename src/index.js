@@ -5,6 +5,7 @@ const redirects = {
   '/gap': 'https://gap-cas.exe.xyz:8000/',
   '/lean-frontend-cf': 'https://lean-frontend-cf.exe.xyz:8000/',
   '/textbooks': 'https://mobile-textbook-reader.exe.xyz:8000/?book=dummit-foote',
+  '/calendar': 'https://xuanji-calendar.exe.xyz:8000/',
 };
 
 export default {
